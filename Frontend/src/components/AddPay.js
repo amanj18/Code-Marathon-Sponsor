@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import AddPayment from "./AddPayment";
+import { AddPayment } from "../Services/APIService.js";
+import "../styles/AddPay.css";
 
-const Post = (props) => {
+const AddPay = (props) => {
   // const log = useContext(LogContext)
 
   const [payment, setPayment] = useState({
@@ -42,10 +43,6 @@ const Post = (props) => {
 
   return (
     <>
-      <h1 className="text-center mb-5" style={{ color: "#007bff" }}>
-        Add a new Payments Ensure that a match can only be created if both
-        PaymentDate and AmountPaid exist in the Payments table
-      </h1>
       <form className="form-group container" onSubmit={validate}>
         <div className="form-group">
           <label htmlFor="contractid">ID:</label>
@@ -93,7 +90,7 @@ const Post = (props) => {
         </div>
         <button
           type="submit"
-          className="btn btn-primary m-2 p-2"
+          className="btn btn-primary m-2 p-2 w-25"
           style={{ borderRadius: "10px" }}
         >
           Add Payment
@@ -103,4 +100,4 @@ const Post = (props) => {
   );
 };
 
-export default Post;
+export default AddPay;

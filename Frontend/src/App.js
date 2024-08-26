@@ -2,11 +2,11 @@ import "bootstrap/dist/css/bootstrap.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Banner from "./components/Banner";
-import Q2 from "./components/Q2";
-import Q3 from "./components/Q3";
+import MatchDetails from "./components/MatchDetails";
+import PayDetails from "./components/PayDetails";
 import Navigation from "./components/Navigation";
-import Post from "./components/Post";
-import Q4 from "./components/Q4";
+import AddPayment from "./components/AddPay";
+import MatchCount from "./components/MatchCount";
 
 function App() {
   return (
@@ -15,10 +15,10 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={<Banner />} />
-          <Route path="/q2" element={<Q2 />} />
-          <Route path="/q3" element={<Q3 />} />
-          <Route path="/post" element={<Post LoggedIn />} />
-          <Route path="/q4" element={<Q4 />} />
+          <Route path="/Match-Details" element={<MatchDetails />} />
+          <Route path="/Pay-Details" element={<PayDetails />} />
+          <Route path="/Add-Payment" element={<AddPayment LoggedIn />} />
+          <Route path="/Match-Count" element={<MatchCount />} />
         </Routes>
       </BrowserRouter>
     </>
